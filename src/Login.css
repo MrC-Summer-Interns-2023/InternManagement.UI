@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+.navbar{
+  height: 100px;
+  width: 200px;
+}
+.icon{
+  display: flex;
+  flex:1;
+}
+.center-box {
+  display: flex;
+  background-color: #4597d2;
+  box-shadow: 0px 0px 10px rgba(130, 25, 25, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 50%;
+ 
+}
+
+.image-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  width: 50px;
+ 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.login-details {
+  flex: 1;
+  padding: 20px;
+  font-size: large;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 120;
+}
+select{
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+
+}
+
+button {
+  padding: 10px;
+  background-color: #0e4d8b;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+ 
+}
+
+button:hover {
+  background-color: #2b5b8f;
+}
+
+ body{
+  background-color: #063970;
+ }
+
+
