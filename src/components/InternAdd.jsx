@@ -10,6 +10,7 @@ function InternAdd() {
     gender: '',
     department: '',
     address: '',
+    profileImage:'',
     orgId: null,
     internId: '', 
     role: 'INTERN', 
@@ -39,6 +40,7 @@ function InternAdd() {
             gender: '',
             department: '',
             address: '',
+            profileImage:'',
             orgId: null,
             internId: '',
             role: 'INTERN',
@@ -57,7 +59,7 @@ function InternAdd() {
 
   return (
     <div className="intern-add-form">
-      <h2>Add New Intern</h2>
+      <h2>ADD NEW INTERN</h2>
       <div className='add-icon'> <i className="fas fa-plus"></i></div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -87,6 +89,10 @@ function InternAdd() {
         <div className="form-group">
           <label>Address:</label>
           <input type="text" name="address" value={formData.address} onChange={handleChange} required />
+        </div>
+        <div className="form-group">
+          <label>Profile URL:</label>
+          <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} required />
         </div>
         <button type="submit">Submit</button>
       </form>
