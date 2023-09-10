@@ -3,10 +3,11 @@ import './InternEdit.css';
 import axios from 'axios';
 import './Navstyle.css'; // Import your stylesheet
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faImages, faPaintBrush, faCar, faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faImages, faPaintBrush, faCar, faBars, faArrowLeft,faHome } from '@fortawesome/free-solid-svg-icons';
 import { Link,useNavigate } from 'react-router-dom';
 import Icon from './internsync.png';
 import './Land.css';
+import InternAdd from './InternAdd';
 
 function InternEdit() {
   const [internData, setInternData] = useState([]);
@@ -22,7 +23,7 @@ function InternEdit() {
     const goBack=()=>{
       history('/admin');
     }
-  
+
   // Function to toggle the sidebar
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -75,7 +76,8 @@ function InternEdit() {
   }, []);
 
   const handleEditClick = (intern) => {
-    setEditingIntern(intern); // Set the intern to be edited
+    history('/admin/profile/edit')
+    setEditingIntern(intern);
   };
 
   const handleDeleteClick = (intern) => {
@@ -145,23 +147,28 @@ function InternEdit() {
               </div>
             </div>
             <ul className="nav flex-column">
+            <li className="nav-item">
+                <Link to="/admin" className="nav-link">
+                  <FontAwesomeIcon icon={faHome} /> Home
+                </Link>
+              </li>
               <li className="nav-item">
                 <Link to="/admin/profile" className="nav-link">
                   <FontAwesomeIcon icon={faUser} /> Profile
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/sessions" className="nav-link">
+                <Link to="/admin/sessions" className="nav-link">
                   <FontAwesomeIcon icon={faImages} /> Sessions
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/tasks" className="nav-link">
+                <Link to="/admin/tasks" className="nav-link">
                   <FontAwesomeIcon icon={faPaintBrush} /> Tasks
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/feedback" className="nav-link">
+                <Link to="/admin/feedback" className="nav-link">
                   <FontAwesomeIcon icon={faCar} /> Feedback
                 </Link>
               </li>
@@ -169,6 +176,7 @@ function InternEdit() {
           </div>
         </div>
       </nav>
+      <InternAdd/>
     </div>
       <div className="intern-edit-container">
       <div>

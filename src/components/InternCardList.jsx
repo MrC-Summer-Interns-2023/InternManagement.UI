@@ -9,6 +9,8 @@ import {
   faPhone,
   faUser,
   faAddressCard,
+  faIdBadge,
+  faFingerprint,
 } from '@fortawesome/free-solid-svg-icons';
 
 function InternCardList() {
@@ -39,8 +41,10 @@ function InternCardList() {
     ) : internData.length > 0 ? (
       internData.map((intern) => (
         <div className="intern-card" key={intern.userId}>
+           <p className='id'>
+            <FontAwesomeIcon icon={faAddressCard} className="icon-userid" />ID: {intern.userId}
+          </p>
           <img src={intern.profileImage} alt={intern.name[0] + intern.name[1]} className="profile-image" />
-          
           <h2>{intern.name}</h2>
           <hr />
           <p>
@@ -56,7 +60,7 @@ function InternCardList() {
             <FontAwesomeIcon icon={faPhone} className="icon-phone" /> {intern.phone}
           </p>
           <p>
-            <FontAwesomeIcon icon={faUser} className="icon-role" /> {intern.role}
+          <FontAwesomeIcon icon={faFingerprint}  className="icon-id" /> {intern.role}: {intern.internId!=null?intern.internId:intern.orgId}
           </p>
           <p>
             <FontAwesomeIcon icon={faAddressCard} className="icon-address" /> {intern.address}

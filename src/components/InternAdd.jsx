@@ -11,9 +11,9 @@ function InternAdd() {
     department: '',
     address: '',
     profileImage:'',
-    orgId: null,
+    orgId: '',
     internId: '', 
-    role: 'INTERN', 
+    role: '',
   });
   const [loading, setLoading] = useState(false); 
 
@@ -41,9 +41,9 @@ function InternAdd() {
             department: '',
             address: '',
             profileImage:'',
-            orgId: null,
+            orgId: '',
             internId: '',
-            role: 'INTERN',
+            role: '',
           });
           console.log('Data added successfully:', response.data);
         } else {
@@ -68,7 +68,11 @@ function InternAdd() {
         </div>
         <div className="form-group">
           <label>Intern ID:</label>
-          <input type="text" name="internId" value={formData.internId} onChange={handleChange} required />
+          <input type="text" name="internId" value={formData.internId} onChange={handleChange} />
+        </div>
+        <div className="form-group">
+          <label>If You Organizer? ID:</label>
+          <input type="text" name="orgId" value={formData.orgId} onChange={handleChange}  />
         </div>
         <div className="form-group">
           <label>Email:</label>
@@ -94,6 +98,11 @@ function InternAdd() {
           <label>Profile URL:</label>
           <input type="text" name="profileImage" value={formData.profileImage} onChange={handleChange} required />
         </div>
+        <div className="form-group">
+          <label>Role:</label>
+          <input type="text" name="role" value={formData.role} onChange={handleChange} required />
+        </div>
+     
         <button type="submit">Submit</button>
       </form>
       {loading && <p>Loading...</p>} {/* Show loading message when loading is true */}

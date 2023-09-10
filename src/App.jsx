@@ -8,9 +8,11 @@ import Signup from './components/Nav/Signup';
 import UserIntern from './components/UserIntern';
 import Admin from './components/Admin';
 import InternEdit from './components/InternEdit';
+import UpdateUserForm from './components/UpdateUserForm';
+import ProfileIntern from './components/ProfileIntern';
+import ProfileOrg from './components/ProfileOrg';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -21,9 +23,11 @@ function App() {
           <Route exact path="/login" element={<Login/>} />
           <Route exact path="/signup" element={<Signup/>} />
           <Route exact path="/userintern" element={<UserIntern/>}/>
-          <Route exact path="/profile" element={<UserIntern/>}/>
-          <Route exact path="/admin" element={<Admin/>}/>
+          <Route exact path="/userintern/profile" element={<ProfileIntern/>}/>
+          <Route exact path="/admin" element={<ProfileOrg/>}/>
           <Route exact path="/admin/profile" element={<InternEdit/>}/>
+          <Route exact path="/admin/profile/add" element={<Admin/>}/>
+          <Route exact path="/admin/profile/edit" element={<UpdateUserForm/>}/>
         </Routes>
       </Router>
     </>
