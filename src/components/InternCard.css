@@ -1,0 +1,54 @@
+:root {
+  --cardWidth: 260px;
+  --cardHeight: 370px;
+  --cardMargin: 26px;
+}
+
+/* InternCard.css */
+.intern-card-list-container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+.intern-card {
+  width: var(--cardWidth);
+  height: var(--cardHeight);
+  margin: var(--cardMargin);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color:#063970;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;  
+}
+
+.intern-card>.profile-image {
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-left: 100px;
+  margin-top: 10px;
+  border: 1px dotted black;
+}
+
+.intern-card:hover {
+  transform: scale(0.99); /* Add a scaling effect on hover */
+  background-color: #ccc;
+}
+
+.intern-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.intern-card p {
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: 500;
+  padding: 5px;
+}
