@@ -1,0 +1,118 @@
+
+nav{
+    background-color: #063970;
+   
+}
+
+nav img{
+    background-color: #063970;
+    padding: 20px 20px;
+    height: 12vh;
+}
+
+h1{
+    color: rgb(238, 238, 241);
+    
+}
+
+#session h1{
+    margin: 1px;
+    height: 8vh;
+    background-color:#d5d9dd;
+    color: #063970;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 200px;
+   
+ }
+
+ label{
+   font-size: 2em;
+   
+ }
+
+ input{
+   border-radius: 5px;
+ }
+
+button{
+    position: absolute;
+    padding: 6px 30px 6px;
+    font-size: 2.0em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 200px;
+    bottom: 60px;
+    border-radius: 10px;
+    background-color: #d5d9dd;
+    outline: none;
+   
+    
+}
+
+
+
+button:focus {
+    border: 2px solid #d5d9dd; /* Add your desired styling for the focus state */
+  }
+
+
+  
+/* .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 2px 3px ;
+    /* padding: 16px; */
+    /* text-decoration: none;
+  } */
+
+  /* .sidebar a img{
+      background-color: none;
+      height: 150px;
+      
+    
+      
+     
+      
+  } */ 
+
+
+  /* styles.css */
+.app {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
